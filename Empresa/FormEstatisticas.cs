@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Empresa
 {
-    public partial class Estatisticas : Form
+    public partial class FormEstatisticas : Form
     {
-        public Estatisticas()
+        public FormEstatisticas()
         {
             InitializeComponent();
+        }
+
+        private void FormEstatisticas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

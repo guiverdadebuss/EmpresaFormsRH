@@ -9,23 +9,24 @@ namespace Empresa
 
         private void btnAbrirRegisto_Click(object sender, EventArgs e)
         {
-            Registo reg = new Registo();
+            FormRegisto reg = new FormRegisto();
             reg.ShowDialog();
-          
+
         }
 
         private void btnAbrirDetalhes_Click(object sender, EventArgs e)
         {
-            Detalhes det = new Detalhes();
+            FormDetalhes det = new FormDetalhes();
             det.ShowDialog();
 
         }
 
         private void btnAbrirEstatisticas_Click(object sender, EventArgs e)
         {
-            Estatisticas est = new Estatisticas();
+            FormEstatisticas est = new FormEstatisticas();
             est.ShowDialog();
 
         }
+
     }
 }

@@ -10,16 +10,18 @@ namespace Empresa.Models
     {
         public double SubsidioAlimentacao { get; set; }
 
-        public Efetivo(int id, string nome, double baseSal, double subsidio)
-            : base(id, nome, baseSal)
+        public Efetivo(int id, string nome, double salarioBase, double subsidio)
+            : base(id, nome, salarioBase)
         {
             SubsidioAlimentacao = subsidio;
         }
 
         public override double CalcularVencimento()
         {
-            double descontos = SalarioBase * 0.11;
-            return SalarioBase + SubsidioAlimentacao - descontos;
+            // Aplicando a regra: Base + Subsídio - Descontos (ex: 11% Segurança Social)
+            double impostos = GetSalarioBase() * 0.11;
+            return GetSalarioBase() + SubsidioAlimentacao - impostos;
         }
     }
 }
+

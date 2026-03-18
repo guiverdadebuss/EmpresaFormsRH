@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Empresa
 {
-    public partial class Detalhes : Form
+    public partial class FormDetalhes : Form
     {
-        public Detalhes()
+        public FormDetalhes()
         {
             InitializeComponent();
+        }
+
+        private void FormDetalhes_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

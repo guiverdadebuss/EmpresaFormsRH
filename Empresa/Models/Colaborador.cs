@@ -21,3 +21,4 @@ namespace Empresa.Models
         public double GetSalarioBase() => SalarioBase;
     }
 }
+
