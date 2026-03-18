@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormRegisto));
             comboBoxTipoEmpregado = new ComboBox();
             panelEfetivo = new Panel();
             groupBox1 = new GroupBox();
@@ -68,7 +69,7 @@
             comboBoxTipoEmpregado.Location = new Point(33, 95);
             comboBoxTipoEmpregado.Margin = new Padding(3, 4, 3, 4);
             comboBoxTipoEmpregado.Name = "comboBoxTipoEmpregado";
-            comboBoxTipoEmpregado.Size = new Size(332, 43);
+            comboBoxTipoEmpregado.Size = new Size(253, 43);
             comboBoxTipoEmpregado.TabIndex = 0;
             comboBoxTipoEmpregado.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
@@ -78,7 +79,7 @@
             panelEfetivo.Location = new Point(33, 179);
             panelEfetivo.Margin = new Padding(3, 4, 3, 4);
             panelEfetivo.Name = "panelEfetivo";
-            panelEfetivo.Size = new Size(465, 464);
+            panelEfetivo.Size = new Size(401, 464);
             panelEfetivo.TabIndex = 1;
             panelEfetivo.Visible = false;
             // 
@@ -164,10 +165,10 @@
             // panelFreelancer
             // 
             panelFreelancer.Controls.Add(groupBox2);
-            panelFreelancer.Location = new Point(33, 179);
+            panelFreelancer.Location = new Point(33, 180);
             panelFreelancer.Margin = new Padding(3, 4, 3, 4);
             panelFreelancer.Name = "panelFreelancer";
-            panelFreelancer.Size = new Size(465, 463);
+            panelFreelancer.Size = new Size(401, 463);
             panelFreelancer.TabIndex = 2;
             panelFreelancer.Visible = false;
             // 
@@ -181,7 +182,7 @@
             groupBox2.Controls.Add(numHorasExtras);
             groupBox2.Controls.Add(label2);
             groupBox2.Controls.Add(txtNomeFree);
-            groupBox2.Font = new Font("Segoe UI", 15F);
+            groupBox2.Font = new Font("Segoe UI", 10F);
             groupBox2.Location = new Point(10, 20);
             groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
@@ -276,19 +277,20 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 15F);
-            label4.Location = new Point(33, 37);
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(33, 57);
             label4.Name = "label4";
-            label4.Size = new Size(370, 35);
+            label4.Size = new Size(253, 23);
             label4.TabIndex = 3;
             label4.Text = "Selecione o tipo de Empregado:";
             // 
             // btnGuardar
             // 
             btnGuardar.BackColor = SystemColors.GradientInactiveCaption;
-            btnGuardar.Location = new Point(381, 95);
+            btnGuardar.Font = new Font("Segoe UI", 10F);
+            btnGuardar.Location = new Point(310, 95);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(117, 43);
+            btnGuardar.Size = new Size(124, 43);
             btnGuardar.TabIndex = 4;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = false;
@@ -298,15 +300,16 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(587, 732);
+            ClientSize = new Size(480, 732);
             Controls.Add(btnGuardar);
             Controls.Add(panelFreelancer);
             Controls.Add(label4);
             Controls.Add(panelEfetivo);
             Controls.Add(comboBoxTipoEmpregado);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegisto";
-            Text = "Registo";
+            Text = "Registo de Colaboradores";
             panelEfetivo.ResumeLayout(false);
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();

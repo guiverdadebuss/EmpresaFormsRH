@@ -33,22 +33,19 @@ namespace Empresa
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            // 1. Verificar se algum tipo de contrato foi selecionado
             if (comboBoxTipoEmpregado.SelectedIndex == -1)
             {
                 MessageBox.Show("Por favor, selecione o tipo de empregado antes de guardar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
-            // 2. Criar variáveis para validar os campos comuns
             string nome = "";
             double salario = 0;
-
-            // 3. Validação específica por painel
+            double subsidio = 0;
             if (comboBoxTipoEmpregado.SelectedIndex == 0) // Efetivo
             {
                 nome = txtNomeEfetivo.Text.Trim();
                 salario = (double)numSalarioEfetivo.Value;
+                subsidio = (double)numSubsidio.Value;
 
                 if (string.IsNullOrEmpty(nome))
                 {
@@ -56,18 +53,19 @@ namespace Empresa
                     txtNomeEfetivo.Focus();
                     return;
                 }
-
                 if (salario <= 0)
                 {
                     MessageBox.Show("O salário base deve ser superior a zero.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (subsidio <= 0)
+                {
+                    MessageBox.Show("O subsidio deve ser superior a zero.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                // Se passar nas validações, cria o objeto
                 int novoId = EmpresaContext.ListaColaboradores.Count + 1;
-                // Nota: Assumi um valor de subsídio padrão já que não vi o campo no teu print, 
-                // mas podes usar um numSubsidio.Value se o tiveres.
-                Efetivo novo = new Efetivo(novoId, nome, salario, 150.00);
+                Efetivo novo = new Efetivo(novoId, nome, salario, subsidio);
                 EmpresaContext.ListaColaboradores.Add(novo);
             }
             else // Freelancer
@@ -81,6 +79,16 @@ namespace Empresa
                 {
                     MessageBox.Show("O nome do freelancer é obrigatório.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtNomeFree.Focus();
+                    return;
+                }
+                if (salario < 0)
+                {
+                    MessageBox.Show("O valor do salario não pode ser negativo.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (horas < 0)
+                {
+                    MessageBox.Show("A quantidade de horas não pode ser negativo.", "Erro de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
