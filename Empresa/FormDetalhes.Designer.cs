@@ -47,12 +47,12 @@
             // 
             // numIdProcura
             // 
-            numIdProcura.Font = new Font("Segoe UI", 15F);
-            numIdProcura.Location = new Point(6, 61);
+            numIdProcura.Font = new Font("Segoe UI", 10F);
+            numIdProcura.Location = new Point(6, 67);
             numIdProcura.Maximum = new decimal(new int[] { 10000, 0, 0, 0 });
             numIdProcura.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
             numIdProcura.Name = "numIdProcura";
-            numIdProcura.Size = new Size(253, 41);
+            numIdProcura.Size = new Size(253, 30);
             numIdProcura.TabIndex = 0;
             numIdProcura.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 

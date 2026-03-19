@@ -82,7 +82,7 @@
             panelEfetivo.Controls.Add(numSalarioEfetivo);
             panelEfetivo.Controls.Add(txtNomeEfetivo);
             panelEfetivo.Font = new Font("Segoe UI", 10F);
-            panelEfetivo.Location = new Point(0, 0);
+            panelEfetivo.Location = new Point(474, 291);
             panelEfetivo.Margin = new Padding(3, 4, 3, 4);
             panelEfetivo.Name = "panelEfetivo";
             panelEfetivo.Padding = new Padding(3, 4, 3, 4);
@@ -163,7 +163,6 @@
             panelFreelancer.Controls.Add(numHorasExtras);
             panelFreelancer.Controls.Add(label2);
             panelFreelancer.Controls.Add(txtNomeFree);
-            panelFreelancer.Controls.Add(panelEfetivo);
             panelFreelancer.Font = new Font("Segoe UI", 10F);
             panelFreelancer.Location = new Point(13, 105);
             panelFreelancer.Margin = new Padding(3, 4, 3, 4);
@@ -309,9 +308,10 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 687);
+            ClientSize = new Size(870, 687);
             Controls.Add(groupBox3);
             Controls.Add(pictureBox1);
+            Controls.Add(panelEfetivo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegisto";

@@ -19,26 +19,24 @@ namespace Empresa
         }
         private void btnProcurar_Click(object sender, EventArgs e)
         {
-            // O NumericUpDown garante que é um número, mas validamos se a lista tem dados
+            // O NumericUpDown para garantir que é um número, mas validamos se a lista tem dados
             if (EmpresaContext.ListaColaboradores.Count == 0)
             {
                 MessageBox.Show("Não existem colaboradores registados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            int idBusca = (int)numIdProcura.Value; // Captura o ID do componente
+            int idBusca = (int)numIdProcura.Value; //procura o ID
 
-            // Procura o colaborador na lista global
             var colab = EmpresaContext.ListaColaboradores.FirstOrDefault(c => c.Id == idBusca);
 
             if (colab != null)
             {
-                // Preenche os campos comuns
                 lblNome.Text = "Nome: " + colab.Nome;
                 lblSalarioBase.Text = "Salário Base: " + colab.GetSalarioBase().ToString("C2");
                 lblVencimento.Text = "Vencimento Final: " + colab.CalcularVencimento().ToString("C2");
 
-                // Identifica o tipo e mostra detalhes específicos (Polimorfismo)
+                //Polimorfismo
                 if (colab is Efetivo ef)
                 {
                     lblTipoContrato.Text = "Tipo: Efetivo";
@@ -53,14 +51,16 @@ namespace Empresa
             else
             {
                 MessageBox.Show("Colaborador com ID " + idBusca + " não encontrado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                // Limpa as labels se não encontrar ninguém
-                lblNome.Text = "---";
-                lblSalarioBase.Text = "---";
-                lblVencimento.Text = "---";
-                lblTipoContrato.Text = "---";
-                lblExtra.Text = "---";
+                LimparCampos();
             }
+        }
+        private void LimparCampos()
+        {
+            lblNome.Text = "---";
+            lblSalarioBase.Text = "---";
+            lblVencimento.Text = "---";
+            lblTipoContrato.Text = "---";
+            lblExtra.Text = "---";
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
