@@ -61,6 +61,26 @@ namespace Empresa.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_ecrã_2026_03_18_152940 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de ecrã 2026-03-18 152940", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_ecrã_2026_03_18_154825 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de ecrã 2026-03-18 154825", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Byte[].
         /// </summary>
         internal static byte[] microsoft_logo {

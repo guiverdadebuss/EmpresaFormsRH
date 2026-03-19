@@ -16,8 +16,8 @@ namespace Empresa
         public FormRegisto()
         {
             InitializeComponent();
-            panelEfetivo.Visible = false;
             panelFreelancer.Visible = false;
+            panelEfetivo.Visible = false;
 
         }
 
@@ -104,6 +104,11 @@ namespace Empresa
             }
 
             MessageBox.Show("Colaborador registado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
+        }
+
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
     }

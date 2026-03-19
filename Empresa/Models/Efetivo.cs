@@ -18,7 +18,6 @@ namespace Empresa.Models
 
         public override double CalcularVencimento()
         {
-            // Aplicando a regra: Base + Subsídio - Descontos (ex: 11% Segurança Social)
             double impostos = GetSalarioBase() * 0.11;
             return GetSalarioBase() + SubsidioAlimentacao - impostos;
         }
