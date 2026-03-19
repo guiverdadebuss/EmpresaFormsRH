@@ -34,12 +34,14 @@
             btnAbrirDetalhes = new Button();
             btnAbrirRegisto = new Button();
             pictureBox1 = new PictureBox();
+            btnFechar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(btnFechar);
             groupBox1.Controls.Add(btnAbrirEstatisticas);
             groupBox1.Controls.Add(btnAbrirDetalhes);
             groupBox1.Controls.Add(btnAbrirRegisto);
@@ -47,14 +49,14 @@
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(422, 344);
+            groupBox1.Size = new Size(422, 395);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Menu";
             // 
             // btnAbrirEstatisticas
             // 
-            btnAbrirEstatisticas.BackColor = SystemColors.GradientActiveCaption;
+            btnAbrirEstatisticas.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirEstatisticas.Font = new Font("Segoe UI", 15F);
             btnAbrirEstatisticas.Location = new Point(72, 211);
             btnAbrirEstatisticas.Margin = new Padding(3, 4, 3, 4);
@@ -67,7 +69,7 @@
             // 
             // btnAbrirDetalhes
             // 
-            btnAbrirDetalhes.BackColor = SystemColors.GradientActiveCaption;
+            btnAbrirDetalhes.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirDetalhes.Font = new Font("Segoe UI", 15F);
             btnAbrirDetalhes.Location = new Point(72, 131);
             btnAbrirDetalhes.Margin = new Padding(3, 4, 3, 4);
@@ -80,7 +82,7 @@
             // 
             // btnAbrirRegisto
             // 
-            btnAbrirRegisto.BackColor = SystemColors.GradientActiveCaption;
+            btnAbrirRegisto.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirRegisto.Font = new Font("Segoe UI", 15F);
             btnAbrirRegisto.Location = new Point(72, 51);
             btnAbrirRegisto.Margin = new Padding(3, 4, 3, 4);
@@ -100,6 +102,18 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
+            // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = SystemColors.GradientInactiveCaption;
+            btnFechar.Font = new Font("Segoe UI", 10F);
+            btnFechar.Location = new Point(292, 345);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(124, 43);
+            btnFechar.TabIndex = 20;
+            btnFechar.Text = "Sair";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // FormMenu
             // 
@@ -125,5 +139,6 @@
         private Button btnAbrirDetalhes;
         private Button btnAbrirRegisto;
         private PictureBox pictureBox1;
+        private Button btnFechar;
     }
 }
