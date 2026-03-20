@@ -41,6 +41,10 @@ namespace Empresa
             string nome = "";
             double salario = 0;
             double subsidio = 0;
+
+
+
+
             if (comboBoxTipoEmpregado.SelectedIndex == 0) // Efetivo
             {
                 nome = txtNomeEfetivo.Text.Trim();
@@ -76,9 +80,11 @@ namespace Empresa
                 {
                     MessageBox.Show("Erro ao gravar: " + ex.Message);
                 }
-
-
             }
+
+
+
+
             else // Freelancer
             {
                 nome = txtNomeFree.Text.Trim();
@@ -126,6 +132,9 @@ namespace Empresa
             }
             LimparCampos();
         }
+
+
+
         private void LimparCampos()
         {
             //Efetivo
