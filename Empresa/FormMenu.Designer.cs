@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMenu));
             groupBox1 = new GroupBox();
+            btnFechar = new Button();
             btnAbrirEstatisticas = new Button();
             btnAbrirDetalhes = new Button();
             btnAbrirRegisto = new Button();
             pictureBox1 = new PictureBox();
-            btnFechar = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -53,6 +53,18 @@
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Menu";
+            // 
+            // btnFechar
+            // 
+            btnFechar.BackColor = SystemColors.GradientInactiveCaption;
+            btnFechar.Font = new Font("Segoe UI", 10F);
+            btnFechar.Location = new Point(292, 345);
+            btnFechar.Name = "btnFechar";
+            btnFechar.Size = new Size(124, 43);
+            btnFechar.TabIndex = 20;
+            btnFechar.Text = "Sair";
+            btnFechar.UseVisualStyleBackColor = false;
+            btnFechar.Click += btnFechar_Click;
             // 
             // btnAbrirEstatisticas
             // 
@@ -103,18 +115,6 @@
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
             // 
-            // btnFechar
-            // 
-            btnFechar.BackColor = SystemColors.GradientInactiveCaption;
-            btnFechar.Font = new Font("Segoe UI", 10F);
-            btnFechar.Location = new Point(292, 345);
-            btnFechar.Name = "btnFechar";
-            btnFechar.Size = new Size(124, 43);
-            btnFechar.TabIndex = 20;
-            btnFechar.Text = "Sair";
-            btnFechar.UseVisualStyleBackColor = false;
-            btnFechar.Click += btnFechar_Click;
-            // 
             // FormMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -126,6 +126,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormMenu";
             RightToLeft = RightToLeft.No;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "π ças RH";
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
