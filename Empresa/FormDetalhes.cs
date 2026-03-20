@@ -20,7 +20,7 @@ namespace Empresa
         private void btnProcurar_Click(object sender, EventArgs e)
         {
             // O NumericUpDown para garantir que é um número, mas validamos se a lista tem dados
-            if (EmpresaContext.ListaColaboradores.Count == 0)
+            if (EmpresaInfo.ListaColaboradores.Count == 0)
             {
                 MessageBox.Show("Não existem colaboradores registados.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -28,21 +28,21 @@ namespace Empresa
 
             int idBusca = (int)numIdProcura.Value; //procura o ID
 
-            var colab = EmpresaContext.ListaColaboradores.FirstOrDefault(c => c.Id == idBusca);
+            var colaborador = EmpresaInfo.ListaColaboradores.FirstOrDefault(c => c.Id == idBusca);
 
-            if (colab != null)
+            if (colaborador != null)
             {
-                lblNome.Text = "Nome: " + colab.Nome;
-                lblSalarioBase.Text = "Salário Base: " + colab.GetSalarioBase().ToString("C2");
-                lblVencimento.Text = "Vencimento Final: " + colab.CalcularVencimento().ToString("C2");
+                lblNome.Text = "Nome: " + colaborador.Nome;
+                lblSalarioBase.Text = "Salário Base: " + colaborador.GetSalarioBase().ToString("C2");
+                lblVencimento.Text = "Vencimento Final: " + colaborador.CalcularVencimento().ToString("C2");
 
                 //Polimorfismo
-                if (colab is Efetivo ef)
+                if (colaborador is Efetivo ef)
                 {
                     lblTipoContrato.Text = "Tipo: Efetivo";
                     lblExtra.Text = "Subsídio Alimentação: " + ef.SubsidioAlimentacao.ToString("C2");
                 }
-                else if (colab is Freelancer fr)
+                else if (colaborador is Freelancer fr)
                 {
                     lblTipoContrato.Text = "Tipo: Freelancer";
                     lblExtra.Text = $"Horas: {fr.HorasExtra} | Valor/Hora: {fr.ValorHora:C2}";
@@ -54,6 +54,9 @@ namespace Empresa
                 LimparCampos();
             }
         }
+
+
+
         private void LimparCampos()
         {
             lblNome.Text = "---";

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Empresa.Models
 {
-    public static class EmpresaContext
+    public static class EmpresaInfo
     {
         public static List<Colaborador> ListaColaboradores = new List<Colaborador>();
     }

@@ -24,7 +24,7 @@ namespace Empresa
         }
         private void CalcularEstatisticas()
         {
-            var lista = EmpresaContext.ListaColaboradores;
+            var lista = EmpresaInfo.ListaColaboradores;
 
             if (lista == null || lista.Count == 0)
             {
@@ -35,7 +35,7 @@ namespace Empresa
             //Número de colaboradores
             lblNumColaboradores.Text = lista.Count.ToString();
 
-            //Valor Total Gasto Mensal - Polimorfismo   -- C2 usado por razões monetarias
+            //Valor Total Gasto Mensal - Polimorfismo   -- C2 usado por razões monetarias CASH MONEY MASCADA
             double totalGasto = lista.Sum(c => c.CalcularVencimento());
             lblValorGasto.Text = totalGasto.ToString("C2");
 
@@ -43,10 +43,9 @@ namespace Empresa
             double mediaBase = lista.Average(c => c.GetSalarioBase());
             lblMediaSalarioBase.Text = mediaBase.ToString("C2");
 
-            //Impostos a Pagar (Apenas 11% sobre o salário base dos Efetivos)
+            //Impostos (Apenas 11% sobre o salário base dos Efetivos)
             //Filtro apenas os Efetivos na lista antes de somar
-            double impostos = lista.OfType<Efetivo>()
-                                   .Sum(ef => ef.GetSalarioBase() * 0.11);
+            double impostos = lista.OfType<Efetivo>().Sum(ef => ef.GetSalarioBase() * 0.11);
             lblImpostosPagar.Text = impostos.ToString("C2");
 
             //Empregado mais bem pago

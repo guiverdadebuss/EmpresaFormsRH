@@ -64,9 +64,9 @@ namespace Empresa
                     return;
                 }
 
-                int novoId = EmpresaContext.ListaColaboradores.Count + 1;
+                int novoId = EmpresaInfo.ListaColaboradores.Count + 1;
                 Efetivo novo = new Efetivo(novoId, nome, salario, subsidio);
-                EmpresaContext.ListaColaboradores.Add(novo);
+                EmpresaInfo.ListaColaboradores.Add(novo);
             }
             else // Freelancer
             {
@@ -98,11 +98,10 @@ namespace Empresa
                     return;
                 }
 
-                int novoId = EmpresaContext.ListaColaboradores.Count + 1;
+                int novoId = EmpresaInfo.ListaColaboradores.Count + 1;
                 Freelancer novo = new Freelancer(novoId, nome, salario, horas, valorH);
-                EmpresaContext.ListaColaboradores.Add(novo);
+                EmpresaInfo.ListaColaboradores.Add(novo);
             }
-
             MessageBox.Show("Colaborador registado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimparCampos();
         }
@@ -112,22 +111,18 @@ namespace Empresa
             txtNomeEfetivo.Clear();
             numSalarioEfetivo.Value = 0;
             numSubsidio.Value = 0;
-
             //Freelancer
             txtNomeFree.Clear();
             numSalarioFree.Value = 0;
             numHorasExtras.Value = 0;
             numValorHora.Value = 0;
-
             //Resetar a ComboBox e os Painéis
             comboBoxTipoEmpregado.SelectedIndex = -1;
             panelEfetivo.Visible = false;
             panelFreelancer.Visible = false;
-
             //foco de volta na combo
             comboBoxTipoEmpregado.Focus();
         }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
