@@ -64,9 +64,20 @@ namespace Empresa
                     return;
                 }
 
-                int novoId = EmpresaInfo.ListaColaboradores.Count + 1;
-                Efetivo novo = new Efetivo(novoId, nome, salario, subsidio);
-                EmpresaInfo.ListaColaboradores.Add(novo);
+                // INSERINDO NA BASE DE DADOS
+                Efetivo novo = new Efetivo(0, nome, salario, subsidio);
+                try
+                {
+                    novo.InserirBaseDeDados();
+                    EmpresaInfo.ListaColaboradores.Add(novo);
+                    MessageBox.Show("Colaborador registado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao gravar: " + ex.Message);
+                }
+
+
             }
             else // Freelancer
             {
@@ -98,11 +109,21 @@ namespace Empresa
                     return;
                 }
 
-                int novoId = EmpresaInfo.ListaColaboradores.Count + 1;
-                Freelancer novo = new Freelancer(novoId, nome, salario, horas, valorH);
-                EmpresaInfo.ListaColaboradores.Add(novo);
+
+                // INSERINDO NA BASE DE DADOS
+                Freelancer novo = new Freelancer(0, nome, salario, horas, valorH);
+                try
+                {
+                    novo.InserirBaseDeDados();
+                    EmpresaInfo.ListaColaboradores.Add(novo);
+                    MessageBox.Show("Colaborador registado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Erro ao gravar freelancer: " + ex.Message);
+                }
+
             }
-            MessageBox.Show("Colaborador registado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             LimparCampos();
         }
         private void LimparCampos()

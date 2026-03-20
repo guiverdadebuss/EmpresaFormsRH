@@ -1,3 +1,5 @@
+using Empresa.Models;
+
 namespace Empresa
 {
     public partial class FormMenu : Form
@@ -5,6 +7,17 @@ namespace Empresa
         public FormMenu()
         {
             InitializeComponent();
+
+            // Tenta carregar os dados assim que o menu abre
+            try
+            {
+                Empresa.Models.EmpresaInfo.CarregarDadosDaBaseDeDados();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não foi possível carregar os dados da base de dados: " + ex.Message,
+                                "Erro de Ligação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnAbrirRegisto_Click(object sender, EventArgs e)
@@ -13,6 +26,7 @@ namespace Empresa
             reg.StartPosition = FormStartPosition.CenterScreen; // abrir a janela no centro da tela
             this.Hide();
             reg.ShowDialog();
+            EmpresaInfo.CarregarDadosDaBaseDeDados(); //recarrega a bd para garantir que esta atualizado
             this.Show();
         }
 
