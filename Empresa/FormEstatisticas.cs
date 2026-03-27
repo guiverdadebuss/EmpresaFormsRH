@@ -32,26 +32,34 @@ namespace Empresa
                 return;
             }
 
+
+
             //Número de colaboradores
             lblNumColaboradores.Text = lista.Count.ToString();
 
-            //Valor Total Gasto Mensal - Polimorfismo   -- C2 usado por razões monetarias CASH MONEY MASCADA
+
+            //Valor Total Gasto Mensal - Polimorfismo           -- C2 usado por razões monetarias CASH MONEY MASCADA
             double totalGasto = lista.Sum(c => c.CalcularVencimento());
             lblValorGasto.Text = totalGasto.ToString("C2");
+
 
             //Média Salário Base (Encapsulamento: usa o GetSalarioBase)
             double mediaBase = lista.Average(c => c.GetSalarioBase());
             lblMediaSalarioBase.Text = mediaBase.ToString("C2");
 
-            //Impostos (Apenas 11% sobre o salário base dos Efetivos)
-            //Filtro apenas os Efetivos na lista antes de somar
-            double impostos = lista.OfType<Efetivo>().Sum(ef => ef.GetSalarioBase() * 0.11);
+
+            //Impostos
+            double impostosEfe = lista.OfType<Efetivo>().Sum(ef => ef.GetSalarioBase() * 0.11);
+            double impostosFree = lista.OfType<Freelancer>().Sum(ef => ef.CalcularVencimento() * 0.11);
+            double impostos = impostosEfe + impostosFree;
             lblImpostosPagar.Text = impostos.ToString("C2");
+
 
             //Empregado mais bem pago
             //Ordenar a lista pelo vencimento final de forma decrescente e pega o primeiro
             var topEmployee = lista.OrderByDescending(c => c.CalcularVencimento()).First();
             lblMaisBemPago.Text = $"{topEmployee.Nome} ({topEmployee.CalcularVencimento():C2})";
+
 
             //Estimativa de gasto anual
             double gastoAnual = totalGasto * 12;

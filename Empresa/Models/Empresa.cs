@@ -10,6 +10,8 @@ namespace Empresa.Models
     {
         public static List<Colaborador> ListaColaboradores = new List<Colaborador>();
 
+
+        // Metodo para buscar a info da database
         public static void CarregarDadosDaBaseDeDados()
         {
             string? connectionString = ConfigurationManager.AppSettings["ConnectionString"];

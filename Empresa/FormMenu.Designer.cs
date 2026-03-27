@@ -49,7 +49,7 @@
             groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
             groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(422, 395);
+            groupBox1.Size = new Size(515, 395);
             groupBox1.TabIndex = 0;
             groupBox1.TabStop = false;
             groupBox1.Text = "Menu";
@@ -58,7 +58,7 @@
             // 
             btnFechar.BackColor = SystemColors.GradientInactiveCaption;
             btnFechar.Font = new Font("Segoe UI", 10F);
-            btnFechar.Location = new Point(292, 345);
+            btnFechar.Location = new Point(385, 345);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(124, 43);
             btnFechar.TabIndex = 20;
@@ -70,7 +70,7 @@
             // 
             btnAbrirEstatisticas.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirEstatisticas.Font = new Font("Segoe UI", 15F);
-            btnAbrirEstatisticas.Location = new Point(72, 211);
+            btnAbrirEstatisticas.Location = new Point(128, 211);
             btnAbrirEstatisticas.Margin = new Padding(3, 4, 3, 4);
             btnAbrirEstatisticas.Name = "btnAbrirEstatisticas";
             btnAbrirEstatisticas.Size = new Size(277, 72);
@@ -83,7 +83,7 @@
             // 
             btnAbrirDetalhes.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirDetalhes.Font = new Font("Segoe UI", 15F);
-            btnAbrirDetalhes.Location = new Point(72, 131);
+            btnAbrirDetalhes.Location = new Point(128, 131);
             btnAbrirDetalhes.Margin = new Padding(3, 4, 3, 4);
             btnAbrirDetalhes.Name = "btnAbrirDetalhes";
             btnAbrirDetalhes.Size = new Size(277, 72);
@@ -96,7 +96,7 @@
             // 
             btnAbrirRegisto.BackColor = SystemColors.GradientInactiveCaption;
             btnAbrirRegisto.Font = new Font("Segoe UI", 15F);
-            btnAbrirRegisto.Location = new Point(72, 51);
+            btnAbrirRegisto.Location = new Point(128, 51);
             btnAbrirRegisto.Margin = new Padding(3, 4, 3, 4);
             btnAbrirRegisto.Name = "btnAbrirRegisto";
             btnAbrirRegisto.Size = new Size(277, 72);
@@ -110,7 +110,7 @@
             pictureBox1.Image = Properties.Resources.Captura_de_ecrã_2026_03_18_152940;
             pictureBox1.Location = new Point(29, 20);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(422, 225);
+            pictureBox1.Size = new Size(515, 225);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -119,7 +119,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 687);
+            ClientSize = new Size(582, 687);
             Controls.Add(pictureBox1);
             Controls.Add(groupBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");

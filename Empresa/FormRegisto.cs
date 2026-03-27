@@ -134,25 +134,31 @@ namespace Empresa
         }
 
 
-
+        // Para limpar os campos depois de criar os colaboradores
         private void LimparCampos()
         {
+
             //Efetivo
             txtNomeEfetivo.Clear();
             numSalarioEfetivo.Value = 0;
             numSubsidio.Value = 0;
+
             //Freelancer
             txtNomeFree.Clear();
             numSalarioFree.Value = 0;
             numHorasExtras.Value = 0;
             numValorHora.Value = 0;
+
             //Resetar a ComboBox e os Painéis
             comboBoxTipoEmpregado.SelectedIndex = -1;
             panelEfetivo.Visible = false;
             panelFreelancer.Visible = false;
+
             //foco de volta na combo
             comboBoxTipoEmpregado.Focus();
         }
+
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();

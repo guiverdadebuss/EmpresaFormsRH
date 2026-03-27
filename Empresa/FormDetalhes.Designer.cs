@@ -133,7 +133,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(38, 32);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(396, 134);
+            pictureBox1.Size = new Size(519, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 12;
             pictureBox1.TabStop = false;
@@ -151,7 +151,7 @@
             groupBox1.Controls.Add(numIdProcura);
             groupBox1.Location = new Point(42, 186);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(393, 456);
+            groupBox1.Size = new Size(515, 456);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
             groupBox1.Text = "Detalhes";
@@ -160,7 +160,7 @@
             // 
             btnFechar.BackColor = SystemColors.GradientInactiveCaption;
             btnFechar.Font = new Font("Segoe UI", 10F);
-            btnFechar.Location = new Point(263, 407);
+            btnFechar.Location = new Point(385, 407);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(124, 43);
             btnFechar.TabIndex = 19;
@@ -172,7 +172,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 687);
+            ClientSize = new Size(582, 687);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");

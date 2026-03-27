@@ -11,7 +11,7 @@ namespace Empresa
             // Tenta carregar os dados assim que o menu abre
             try
             {
-                Empresa.Models.EmpresaInfo.CarregarDadosDaBaseDeDados();
+                Empresa.Models.EmpresaInfo.CarregarDadosDaBaseDeDados();   // EmpresaInfo nome da classe onde guardo a lista de colaboradores
             }
             catch (Exception ex)
             {

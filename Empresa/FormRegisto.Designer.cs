@@ -82,7 +82,7 @@
             panelEfetivo.Controls.Add(numSalarioEfetivo);
             panelEfetivo.Controls.Add(txtNomeEfetivo);
             panelEfetivo.Font = new Font("Segoe UI", 10F);
-            panelEfetivo.Location = new Point(474, 291);
+            panelEfetivo.Location = new Point(13, 106);
             panelEfetivo.Margin = new Padding(3, 4, 3, 4);
             panelEfetivo.Name = "panelEfetivo";
             panelEfetivo.Padding = new Padding(3, 4, 3, 4);
@@ -164,7 +164,7 @@
             panelFreelancer.Controls.Add(label2);
             panelFreelancer.Controls.Add(txtNomeFree);
             panelFreelancer.Font = new Font("Segoe UI", 10F);
-            panelFreelancer.Location = new Point(13, 105);
+            panelFreelancer.Location = new Point(13, 106);
             panelFreelancer.Margin = new Padding(3, 4, 3, 4);
             panelFreelancer.Name = "panelFreelancer";
             panelFreelancer.Padding = new Padding(3, 4, 3, 4);
@@ -273,7 +273,7 @@
             pictureBox1.Image = Properties.Resources.Captura_de_ecrã_2026_03_18_154825;
             pictureBox1.Location = new Point(38, 32);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(396, 134);
+            pictureBox1.Size = new Size(519, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
@@ -284,10 +284,11 @@
             groupBox3.Controls.Add(btnGuardar);
             groupBox3.Controls.Add(comboBoxTipoEmpregado);
             groupBox3.Controls.Add(panelFreelancer);
+            groupBox3.Controls.Add(panelEfetivo);
             groupBox3.Font = new Font("Segoe UI", 10F);
             groupBox3.Location = new Point(42, 186);
             groupBox3.Name = "groupBox3";
-            groupBox3.Size = new Size(393, 456);
+            groupBox3.Size = new Size(515, 456);
             groupBox3.TabIndex = 6;
             groupBox3.TabStop = false;
             groupBox3.Text = "Selecione o tipo de Empregado:";
@@ -296,7 +297,7 @@
             // 
             btnFechar.BackColor = SystemColors.GradientInactiveCaption;
             btnFechar.Font = new Font("Segoe UI", 10F);
-            btnFechar.Location = new Point(263, 407);
+            btnFechar.Location = new Point(385, 407);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(124, 43);
             btnFechar.TabIndex = 19;
@@ -308,10 +309,9 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(870, 687);
+            ClientSize = new Size(582, 687);
             Controls.Add(groupBox3);
             Controls.Add(pictureBox1);
-            Controls.Add(panelEfetivo);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             Name = "FormRegisto";

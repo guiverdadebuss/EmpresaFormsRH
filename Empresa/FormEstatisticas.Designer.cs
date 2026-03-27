@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEstatisticas));
             pictureBox1 = new PictureBox();
             groupBox1 = new GroupBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            lblValorGasto = new Label();
+            label1 = new Label();
             btnFechar = new Button();
             lblGastoAnual = new Label();
             lblMaisBemPago = new Label();
@@ -38,12 +44,6 @@
             lblMediaSalarioBase = new Label();
             lbl23 = new Label();
             lblNumColaboradores = new Label();
-            label1 = new Label();
-            lblValorGasto = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -53,7 +53,7 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(38, 32);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(396, 134);
+            pictureBox1.Size = new Size(519, 134);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
@@ -75,16 +75,76 @@
             groupBox1.Controls.Add(lblNumColaboradores);
             groupBox1.Location = new Point(42, 186);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(393, 456);
+            groupBox1.Size = new Size(515, 456);
             groupBox1.TabIndex = 7;
             groupBox1.TabStop = false;
             groupBox1.Text = "Estatisticas";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 10F);
+            label5.Location = new Point(6, 289);
+            label5.Name = "label5";
+            label5.Size = new Size(189, 23);
+            label5.TabIndex = 24;
+            label5.Text = "Estimativa Gasto Anual:";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 10F);
+            label4.Location = new Point(6, 242);
+            label4.Name = "label4";
+            label4.Size = new Size(225, 23);
+            label4.TabIndex = 23;
+            label4.Text = "Empregado mais bem pago:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 10F);
+            label3.Location = new Point(6, 197);
+            label3.Name = "label3";
+            label3.Size = new Size(84, 23);
+            label3.TabIndex = 22;
+            label3.Text = "Impostos:";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F);
+            label2.Location = new Point(6, 156);
+            label2.Name = "label2";
+            label2.Size = new Size(157, 23);
+            label2.TabIndex = 21;
+            label2.Text = "Media Salario Base:";
+            // 
+            // lblValorGasto
+            // 
+            lblValorGasto.AutoSize = true;
+            lblValorGasto.Font = new Font("Segoe UI", 10F);
+            lblValorGasto.Location = new Point(242, 109);
+            lblValorGasto.Name = "lblValorGasto";
+            lblValorGasto.Size = new Size(31, 23);
+            lblValorGasto.TabIndex = 20;
+            lblValorGasto.Text = "---";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 10F);
+            label1.Location = new Point(6, 61);
+            label1.Name = "label1";
+            label1.Size = new Size(217, 23);
+            label1.TabIndex = 19;
+            label1.Text = "Numero de Colaboradores:";
             // 
             // btnFechar
             // 
             btnFechar.BackColor = SystemColors.GradientInactiveCaption;
             btnFechar.Font = new Font("Segoe UI", 10F);
-            btnFechar.Location = new Point(263, 407);
+            btnFechar.Location = new Point(385, 407);
             btnFechar.Name = "btnFechar";
             btnFechar.Size = new Size(124, 43);
             btnFechar.TabIndex = 18;
@@ -152,71 +212,11 @@
             lblNumColaboradores.TabIndex = 12;
             lblNumColaboradores.Text = "---";
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 10F);
-            label1.Location = new Point(6, 61);
-            label1.Name = "label1";
-            label1.Size = new Size(217, 23);
-            label1.TabIndex = 19;
-            label1.Text = "Numero de Colaboradores:";
-            // 
-            // lblValorGasto
-            // 
-            lblValorGasto.AutoSize = true;
-            lblValorGasto.Font = new Font("Segoe UI", 10F);
-            lblValorGasto.Location = new Point(242, 109);
-            lblValorGasto.Name = "lblValorGasto";
-            lblValorGasto.Size = new Size(31, 23);
-            lblValorGasto.TabIndex = 20;
-            lblValorGasto.Text = "---";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 10F);
-            label2.Location = new Point(6, 156);
-            label2.Name = "label2";
-            label2.Size = new Size(157, 23);
-            label2.TabIndex = 21;
-            label2.Text = "Media Salario Base:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 10F);
-            label3.Location = new Point(6, 197);
-            label3.Name = "label3";
-            label3.Size = new Size(84, 23);
-            label3.TabIndex = 22;
-            label3.Text = "Impostos:";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 10F);
-            label4.Location = new Point(6, 242);
-            label4.Name = "label4";
-            label4.Size = new Size(225, 23);
-            label4.TabIndex = 23;
-            label4.Text = "Empregado mais bem pago:";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 10F);
-            label5.Location = new Point(6, 289);
-            label5.Name = "label5";
-            label5.Size = new Size(189, 23);
-            label5.TabIndex = 24;
-            label5.Text = "Estimativa Gasto Anual:";
-            // 
             // FormEstatisticas
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(480, 687);
+            ClientSize = new Size(582, 687);
             Controls.Add(groupBox1);
             Controls.Add(pictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
